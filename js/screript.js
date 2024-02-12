@@ -1,3 +1,5 @@
+// Triangle card start
+
 function triangleCalculator () {
     const triangleBaseInput = document.getElementById('triangle-base');
     const triangleBaseText = triangleBaseInput.value;
@@ -10,21 +12,20 @@ function triangleCalculator () {
 
 
     const area = 0.5 * base * height;
-    // console.log(area);
 
     const triangleAreaSpan = document.getElementById('triangle-area');
     triangleAreaSpan.innerText = area;
 
-
 }
 
+// Triangle card end
 
+// Rectangle card start
 
 function rectangleCalculator() {
     const rectangleLengthInput = document.getElementById('rectangle-length');
     const rectangleLengthInputText = rectangleLengthInput.value;
     const length = parseFloat(rectangleLengthInputText);
-    console.log(typeof length);
 
     const rectangleWidthInput = document.getElementById('rectangle-width');
     const rectangleWidthInputText = rectangleWidthInput.value;
@@ -35,3 +36,5 @@ function rectangleCalculator() {
     const rectangleArea = document.getElementById('rectangle-area');
     rectangleArea.innerText = area;
 }
+
+// Rectangle card end
