@@ -21,5 +21,17 @@ function triangleCalculator () {
 
 
 function rectangleCalculator() {
-    console.log('rectangleCalculator');
+    const rectangleLengthInput = document.getElementById('rectangle-length');
+    const rectangleLengthInputText = rectangleLengthInput.value;
+    const length = parseFloat(rectangleLengthInputText);
+    console.log(typeof length);
+
+    const rectangleWidthInput = document.getElementById('rectangle-width');
+    const rectangleWidthInputText = rectangleWidthInput.value;
+    const width = parseFloat(rectangleWidthInputText);
+
+    const area = length * width;
+
+    const rectangleArea = document.getElementById('rectangle-area');
+    rectangleArea.innerText = area;
 }
