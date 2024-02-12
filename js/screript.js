@@ -1,20 +1,10 @@
 // Triangle card start
 
-function triangleCalculator () {
-    const triangleBaseInput = document.getElementById('triangle-base');
-    const triangleBaseText = triangleBaseInput.value;
-    const base  = parseFloat(triangleBaseText);
-    // console.log(base);
-
-    const triangleHeightInput = document.getElementById('triangle-height');
-    const triangleHeightText = triangleHeightInput.value;
-    const height = parseFloat(triangleHeightText);
-
-
+function triangleCalculator() {
+    const base = repeat('triangle-base');
+    const height = repeat('triangle-height');
     const area = 0.5 * base * height;
-
-    const triangleAreaSpan = document.getElementById('triangle-area');
-    triangleAreaSpan.innerText = area;
+    textSet('triangle-area', area);
 
 }
 
@@ -23,18 +13,63 @@ function triangleCalculator () {
 // Rectangle card start
 
 function rectangleCalculator() {
-    const rectangleLengthInput = document.getElementById('rectangle-length');
-    const rectangleLengthInputText = rectangleLengthInput.value;
-    const length = parseFloat(rectangleLengthInputText);
-
-    const rectangleWidthInput = document.getElementById('rectangle-width');
-    const rectangleWidthInputText = rectangleWidthInput.value;
-    const width = parseFloat(rectangleWidthInputText);
-
+    const length = repeat('rectangle-length');
+    const width = repeat('rectangle-width');
     const area = length * width;
-
-    const rectangleArea = document.getElementById('rectangle-area');
-    rectangleArea.innerText = area;
+    textSet('rectangle-area', area);
 }
 
 // Rectangle card end
+
+// Parallelogram card start
+function parallelogramCalculator() {
+    const base = repeat('parallelogram-base')
+    const height = repeat('parallelogram-height');
+    const width = base * height;
+    textSet('parallelogram-area', width);
+}
+// Parallelogram card end
+
+// Rhombus card start
+function rhombusCalculator() {
+    const base = repeat('rhombus-base');
+    const height = repeat('rhombus-height');
+    const area = 0.5 * base * height;
+    textSet('rhombus-area', area);
+}
+// Rhombus card end
+
+
+// Pentagon card start
+function pentagonCalculator() {
+    const base = repeat('pentagon-base');
+    const height = repeat('pentagon-height');
+    const area = 0.5 * base * height;
+    textSet('pentagon-area', area);
+}
+// Pentagon card end
+
+// Ellipse card start
+function ellipseCalculator() {
+    const base = repeat('ellipse-base');
+    const height = repeat('ellipse-height');
+    const area = 3.141 * base * height;
+    textSet('ellipse-area', area);
+}
+// Ellipse card end
+
+
+// reused function
+
+function repeat(input) {
+    const inputValue = document.getElementById(input);
+    const inputText = inputValue.value;
+    const area = parseFloat(inputText);
+    inputValue.value = '';
+    return area;
+}
+
+function textSet(elementId, area) {
+    const element = document.getElementById(elementId);
+    element.innerText = area;
+}

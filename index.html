@@ -21,13 +21,14 @@
                 <!-- Triangle card -->
                 <div class="card w-96 bg-base-100 shadow-xl">
                     <figure><img src="/images/triangle.png" alt="Shoes" /></figure>
-                    <div class="card-body">
-                        <h2 class="card-title">Triangle</h2>
+                    <div class="card-body text-center">
+                        <h2 class="card-title justify-center">Triangle</h2>
                         <p class="text-center text-3xl">Area (A) = 0.5 x b x h</p>
                         <div>
                             <input id="triangle-base" class="w-24 text-2xl p-2 rounded-sm" type="text" placeholder="b">
                             <span class="mr-4 ml-2">cm</span>
-                            <input id="triangle-height" class="w-24 text-2xl p-2 rounded-sm" type="text" placeholder="h">
+                            <input id="triangle-height" class="w-24 text-2xl p-2 rounded-sm" type="text"
+                                placeholder="h">
                             <span class="mr-4 ml-2">cm</span>
                         </div>
                         <div>
@@ -40,15 +41,16 @@
                 </div>
                 <!-- Rectangle card -->
                 <div class="card w-96 bg-base-100 shadow-xl">
-                    <figure><img src="/images/rectangle.png"
-                            alt="Shoes" /></figure>
-                    <div class="card-body">
-                        <h2 class="card-title">Rectangle</h2>
+                    <figure><img src="/images/rectangle.png" alt="Shoes" /></figure>
+                    <div class="card-body text-center">
+                        <h2 class="card-title justify-center">Rectangle</h2>
                         <p class="text-center text-3xl">Area (A) = W x I</p>
                         <div>
-                            <input id="rectangle-length" class="w-24 text-2xl p-2 rounded-sm" type="text" placeholder="I">
+                            <input id="rectangle-length" class="w-24 text-2xl p-2 rounded-sm" type="text"
+                                placeholder="I">
                             <span class="mr-4 ml-2">cm</span>
-                            <input id="rectangle-width" class="w-24 text-2xl p-2 rounded-sm" type="text" placeholder="w">
+                            <input id="rectangle-width" class="w-24 text-2xl p-2 rounded-sm" type="text"
+                                placeholder="w">
                             <span class="mr-4 ml-2">cm</span>
                         </div>
                         <div>
@@ -61,25 +63,87 @@
                 </div>
                 <!-- Parallelogram card -->
                 <div class="card w-96 bg-base-100 shadow-xl">
-                    <figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
-                            alt="Shoes" /></figure>
-                    <div class="card-body">
-                        <h2 class="card-title">Shoes!</h2>
-                        <p>If a dog chews shoes whose shoes does he choose?</p>
-                        <div class="card-actions justify-end">
-                            <button class="btn btn-primary">Buy Now</button>
+                    <figure><img src="/images/parallelogram.png" alt="Shoes" /></figure>
+                    <div class="card-body text-center">
+                        <h2 class="card-title justify-center">Parallelogram</h2>
+                        <p class="text-center text-3xl">Area (A) = b x h</p>
+                        <div>
+                            <input id="parallelogram-base" class="w-24 text-2xl p-2 rounded-sm" type="text"
+                                placeholder="I">
+                            <span class="mr-4 ml-2">cm</span>
+                            <input id="parallelogram-height" class="w-24 text-2xl p-2 rounded-sm" type="text"
+                                placeholder="w">
+                            <span class="mr-4 ml-2">cm</span>
+                        </div>
+                        <div>
+                            <p class="text-2xl">Area: <span id="parallelogram-area"></span> <span>cm<sup>2</sup></span>
+                            </p>
+                        </div>
+                        <div class="card-actions">
+                            <button onclick="parallelogramCalculator()"
+                                class="btn btn-primary w-full">Calculate</button>
                         </div>
                     </div>
                 </div>
-
+                <!-- Rhombus card -->
                 <div class="card w-96 bg-base-100 shadow-xl">
-                    <figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
-                            alt="Shoes" /></figure>
-                    <div class="card-body">
-                        <h2 class="card-title">Shoes!</h2>
-                        <p>If a dog chews shoes whose shoes does he choose?</p>
-                        <div class="card-actions justify-end">
-                            <button class="btn btn-primary">Buy Now</button>
+                    <figure><img src="/images/rhombus.png" alt="Shoes" /></figure>
+                    <div class="card-body text-center">
+                        <h2 class="card-title justify-center">Rhombus</h2>
+                        <p class="text-center text-3xl">Area (A) =0.5 x d<sub>1</sub> x d<sub>2</sub></p>
+                        <div>
+                            <input id="rhombus-base" class="w-24 text-2xl p-2 rounded-sm" type="text" placeholder="d1">
+                            <span class="mr-4 ml-2">cm</span>
+                            <input id="rhombus-height" class="w-24 text-2xl p-2 rounded-sm" type="text"
+                                placeholder="d2">
+                            <span class="mr-4 ml-2">cm</span>
+                        </div>
+                        <div>
+                            <p class="text-2xl">Area: <span id="rhombus-area"></span> <span>cm<sup>2</sup></span></p>
+                        </div>
+                        <div class="card-actions">
+                            <button onclick="rhombusCalculator()" class="btn btn-primary w-full">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Pentagon card -->
+                <div class="card w-96 bg-base-100 shadow-xl">
+                    <figure><img src="/images/pentagon.png" alt="Shoes" /></figure>
+                    <div class="card-body text-center">
+                        <h2 class="card-title justify-center">Pentagon</h2>
+                        <p class="text-center text-3xl">Area (A) =0.5 x p x b</p>
+                        <div>
+                            <input id="pentagon-base" class="w-24 text-2xl p-2 rounded-sm" type="text" placeholder="p">
+                            <span class="mr-4 ml-2">cm</span>
+                            <input id="pentagon-height" class="w-24 text-2xl p-2 rounded-sm" type="text"
+                                placeholder="b">
+                            <span class="mr-4 ml-2">cm</span>
+                        </div>
+                        <div>
+                            <p class="text-2xl">Area: <span id="pentagon-area"></span> <span>cm<sup>2</sup></span></p>
+                        </div>
+                        <div class="card-actions">
+                            <button onclick="pentagonCalculator()" class="btn btn-primary w-full">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Ellipse card -->
+                <div class="card w-96 bg-base-100 shadow-xl">
+                    <figure><img src="/images/ellipse.png" alt="Shoes" /></figure>
+                    <div class="card-body text-center">
+                        <h2 class="card-title justify-center ">Ellipse</h2>
+                        <p class="text-center text-3xl">Area (A) = πab</p>
+                        <div>
+                            <input id="ellipse-base" class="w-24 text-2xl p-2 rounded-sm" type="text" placeholder="p">
+                            <span class="mr-4 ml-2">cm</span>
+                            <input id="ellipse-height" class="w-24 text-2xl p-2 rounded-sm" type="text" placeholder="b">
+                            <span class="mr-4 ml-2">cm</span>
+                        </div>
+                        <div>
+                            <p class="text-2xl">Area: <span id="ellipse-area"></span> <span>cm<sup>2</sup></span></p>
+                        </div>
+                        <div class="card-actions">
+                            <button onclick="ellipseCalculator()" class="btn btn-primary w-full">Calculate</button>
                         </div>
                     </div>
                 </div>
